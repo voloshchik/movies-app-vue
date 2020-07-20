@@ -8,7 +8,6 @@ function setParams(config) {
 }
 
 function returnData(res) {
-  console.log("res", res);
   return res.data;
 }
 

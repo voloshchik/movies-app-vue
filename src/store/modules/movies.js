@@ -41,7 +41,7 @@ const moviesStore = {
         const from = currentPage * moviesPerPage - moviesPerPage;
         const to = currentPage * moviesPerPage;
         const moviesToFetch = slicedIDs(from, to);
-        console.log("moviesToFetch", moviesToFetch);
+
         const requests = moviesToFetch.map(id => axios.get(`/?i=${id}`));
 
         const response = await Promise.all(requests);
