@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Header />
     <Loader />
     <PosterBg :poster="posterBg" />
     <MoviesList :list="moviesList" @changePoster="onChangePoster" />
@@ -17,11 +18,13 @@ import { mapActions, mapGetters } from "vuex";
 import MoviesList from "./components/MoviesList";
 import PosterBg from "./components/PosterBg";
 import MoviesPagination from "./components/MoviesPagination";
+import Header from "./components/Header";
+
 import Loader from "./components/Loader";
 
 export default {
   name: "App",
-  components: { MoviesList, PosterBg, MoviesPagination, Loader },
+  components: { MoviesList, PosterBg, MoviesPagination, Loader, Header },
 
   computed: {
     ...mapGetters("movies", [
