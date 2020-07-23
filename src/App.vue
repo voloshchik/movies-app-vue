@@ -2,6 +2,7 @@
   <div id="app">
     <Header />
     <Loader />
+    <Notification />
     <PosterBg :poster="posterBg" />
     <MoviesList :list="moviesList" @changePoster="onChangePoster" />
     <MoviesPagination
@@ -19,12 +20,20 @@ import MoviesList from "./components/MoviesList";
 import PosterBg from "./components/PosterBg";
 import MoviesPagination from "./components/MoviesPagination";
 import Header from "./components/Header";
+import Notification from "./components/Notification";
 
 import Loader from "./components/Loader";
 
 export default {
   name: "App",
-  components: { MoviesList, PosterBg, MoviesPagination, Loader, Header },
+  components: {
+    MoviesList,
+    PosterBg,
+    MoviesPagination,
+    Loader,
+    Header,
+    Notification,
+  },
 
   computed: {
     ...mapGetters("movies", [
